@@ -87,7 +87,7 @@ class _HomepageState extends State<Homepage> {
                           decoration: BoxDecoration(
                               color: primaryBlack,
                               borderRadius:
-                              BorderRadiusDirectional.circular(10)),
+                                  BorderRadiusDirectional.circular(10)),
                           child:
                           Text("Regional").text
                               .size(16)
