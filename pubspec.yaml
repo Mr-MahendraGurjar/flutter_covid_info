@@ -29,6 +29,8 @@ dependencies:
   dynamic_theme:
   pie_chart:
   velocity_x: ^0.3.0
+  splashscreen: ^1.2.0
+  flutter_spinkit: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +47,11 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  assets:
+    - assets/attachment.gif
+    - assets/loading.gif
+    - assets/img/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -63,6 +70,10 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Product Sans
+      fonts:
+        - asset: assets/font/Product_Sans_Bold.ttf
+        - asset: assets/font/Product_Sans_Regular.ttf
     - family: Circular
       fonts:
         - asset: fonts/CircularStd-Medium.ttf
