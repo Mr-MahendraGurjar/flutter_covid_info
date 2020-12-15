@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercovidinfo/homepage.dart';
-import 'package:fluttercovidinfo/datasorce.dart';
-import 'package:velocity_x/velocity_x.dart';
+import 'file:///C:/Users/HOME/FlutterProjects/flutter_covid_info/flutter_covid_info/lib/screens/homepage.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 void main(){

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercovidinfo/datasorce.dart';
+import 'file:///C:/Users/HOME/FlutterProjects/flutter_covid_info/flutter_covid_info/lib/widgets/datasorce.dart';
 import 'package:fluttercovidinfo/widgets/faqs.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class Info extends StatelessWidget {
@@ -28,7 +27,6 @@ class Info extends StatelessWidget {
             ),
           ),
           GestureDetector(onTap: (){
-            launch("https://covid19responsefund.org/");
           },
             child: Container(
               color: primaryBlack,
@@ -44,7 +42,6 @@ class Info extends StatelessWidget {
             ),
           ),
           GestureDetector(onTap: (){
-            launch("https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters");
           },
             child: Container(
               color: primaryBlack,

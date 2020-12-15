@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercovidinfo/datasorce.dart';
+import 'file:///C:/Users/HOME/FlutterProjects/flutter_covid_info/flutter_covid_info/lib/widgets/datasorce.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class FAQSPage extends StatelessWidget {

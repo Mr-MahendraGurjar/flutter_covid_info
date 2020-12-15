@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -33,7 +32,7 @@ class _CountryPageState extends State<CountryPage> {
         title: Text("Country Stats"),
       ),
       body: countryData == null
-          ? Center(child: SpinKitFoldingCube(color: Colors.blue))
+          ? Center(child: CircularProgressIndicator())
           : ListView.builder(
               itemBuilder: (context, index) {
                 return Container(

@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:fluttercovidinfo/widgets/countrypage.dart';
+import 'package:fluttercovidinfo/screens/state_wise.dart';
+import 'file:///C:/Users/HOME/FlutterProjects/flutter_covid_info/flutter_covid_info/lib/screens/countrypage.dart';
 import 'package:fluttercovidinfo/widgets/info.dart';
-import 'package:fluttercovidinfo/widgets/mostaffactedcountry.dart';
+import 'file:///C:/Users/HOME/FlutterProjects/flutter_covid_info/flutter_covid_info/lib/screens/mostaffactedcountry.dart';
 import 'package:fluttercovidinfo/widgets/worldwide.dart';
 import 'package:pie_chart/pie_chart.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:fluttercovidinfo/datasorce.dart';
+import 'file:///C:/Users/HOME/FlutterProjects/flutter_covid_info/flutter_covid_info/lib/widgets/datasorce.dart';
 import 'package:http/http.dart' as http;
 
 class Homepage extends StatefulWidget {
@@ -80,6 +80,26 @@ class _HomepageState extends State<Homepage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
+                                builder: (context) => StateScreen()));
+                      },
+                      child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: primaryBlack,
+                              borderRadius:
+                                  BorderRadiusDirectional.circular(10)),
+                          child: Text("StateWise")
+                              .text
+                              .size(16)
+                              .white
+                              .bold
+                              .make()),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
                                 builder: (context) => CountryPage()));
                       },
                       child: Container(
@@ -89,7 +109,7 @@ class _HomepageState extends State<Homepage> {
                               borderRadius:
                                   BorderRadiusDirectional.circular(10)),
                           child:
-                          Text("Regional").text
+                          Text("Country Wise").text
                               .size(16)
                               .white
                               .bold
@@ -99,7 +119,7 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               worldData == null
-                  ? Center(child: SpinKitThreeBounce(color: Colors.blueAccent))
+                  ? Center(child: CircularProgressIndicator())
                   : Worldwide(
                 worldData: worldData,
               ),
@@ -127,7 +147,7 @@ class _HomepageState extends State<Homepage> {
                 height: 10,
               ),
               countryData == null
-                  ? Center(child: SpinKitChasingDots(color: Colors.blue))
+                  ? Center(child: CircularProgressIndicator())
                   : MostAffectedCountry(
                 countryData: countryData,
               ),
